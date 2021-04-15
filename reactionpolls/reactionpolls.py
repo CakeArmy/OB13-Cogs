@@ -113,7 +113,7 @@ class ReactionPolls(commands.Cog):
         if (
                 await self.bot.cog_disabled_in_guild(self, message.guild) or  # Cog disabled in guild
                 not settings["toggle"] or  # ReactionPolls toggled off
-                message.author.bot or  # Message author is a bot
+              #  message.author.bot or  # Message author is a bot
                 not ch_settings or  # Message not in a ReactionPoll channel
                 not settings["channels"][str(message.channel.id)]["toggle"] or  # ReactionPoll channel toggled off
                 not message.channel.permissions_for(message.guild.me).add_reactions  # Cannot add reactions
